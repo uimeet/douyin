@@ -333,7 +333,7 @@ class OauthUserinfoResponseData(object):
         :type: str
         """
         allowed_values = ["EAccountM", "EAccountS", "EAccountK"]  # noqa: E501
-        if e_account_role not in allowed_values:
+        if e_account_role and e_account_role not in allowed_values:
             raise ValueError(
                 "Invalid value for `e_account_role` ({0}), must be one of {1}"  # noqa: E501
                 .format(e_account_role, allowed_values)
